@@ -1,285 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Klypr — Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Klypr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --k-bg: #060f2d;
+      --k-bg-card: rgba(15, 36, 90, 0.55);
+      --k-bg-input: rgba(255, 255, 255, 0.07);
+      --k-border: rgba(122, 167, 245, 0.25);
+      --k-border-md: rgba(122, 167, 245, 0.35);
+      --k-text: #f4f8ff;
+      --k-text-2: #a8c0f5;
+      --k-text-muted: #9db9e9;
+      --k-accent-from: #386de0;
+      --k-accent-to: #66a3ff;
+      --k-shadow: rgba(5, 9, 24, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
+      margin: 0;
       min-height: 100vh;
-      background: linear-gradient(135deg, #2d5be3 0%, #4a78f5 40%, #6b9aff 100%);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 48px 20px 80px;
+      font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--k-text);
+      background: var(--k-bg);
+      background-image: linear-gradient(170deg, #07163d 0%, #050d28 55%, var(--k-bg) 100%);
     }
 
-    .card {
-      background: #0f1524;
-      border-radius: 22px;
-      width: 100%;
+    .wrap {
       max-width: 640px;
-      overflow: hidden;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.45);
+      margin: 0 auto;
+      padding: 48px 20px 64px;
     }
 
-    .topbar {
-      background: #0b1020;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    .brand {
+      font-family: Poppins, "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      background: linear-gradient(90deg, var(--k-accent-from), var(--k-accent-to));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 0.5px rgba(56, 109, 224, 0.35));
+      margin-bottom: 6px;
     }
 
-    .topbar-logo {
-      font-size: 17px;
-      font-weight: 700;
-      color: #5b8bff;
-      letter-spacing: -0.3px;
+    .sub {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--k-text-2);
+      margin-bottom: 32px;
     }
 
-    .topbar-tag {
-      font-size: 12px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.09);
-      padding: 5px 13px;
-      border-radius: 7px;
-    }
-
-    .content {
-      padding: 32px 28px 44px;
-    }
-
-    .page-title {
-      font-size: 24px;
+    h1 {
+      font-family: Poppins, "Plus Jakarta Sans", sans-serif;
+      font-size: 1.35rem;
       font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.5px;
-      margin-bottom: 5px;
-    }
-
-    .page-sub {
-      font-size: 13px;
-      color: rgba(255,255,255,0.28);
-      font-weight: 400;
-      margin-bottom: 26px;
-    }
-
-    .section {
-      background: #151c2e;
-      border-radius: 13px;
-      padding: 18px 20px;
-      margin-bottom: 10px;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: border-color 0.2s ease;
-    }
-
-    .section:hover {
-      border-color: rgba(91,139,255,0.28);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 9px;
-    }
-
-    .section-icon {
-      width: 28px;
-      height: 28px;
-      background: rgba(59,110,248,0.14);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      flex-shrink: 0;
+      color: var(--k-text);
+      margin: 0 0 20px;
+      letter-spacing: 0.02em;
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--k-text-muted);
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--k-border);
+    }
+
+    .card {
+      background: var(--k-bg-card);
+      border: 1px solid var(--k-border-md);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 40px var(--k-shadow);
     }
 
     p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.42);
-      line-height: 1.75;
-      font-weight: 400;
+      margin: 0 0 14px;
+      color: var(--k-text);
     }
 
-    code {
-      background: rgba(91,139,255,0.14);
-      color: #7ba7ff;
-      padding: 1px 7px;
-      border-radius: 5px;
-      font-size: 12px;
-      font-family: 'SF Mono', 'Fira Code', monospace;
+    p:last-child {
+      margin-bottom: 0;
     }
 
-    .dont-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-top: 2px;
+    ul {
+      margin: 0;
+      padding-left: 1.15em;
+      color: var(--k-text-2);
     }
 
-    .dont-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.42);
-      font-weight: 400;
+    li {
+      margin-bottom: 8px;
     }
 
-    .x-badge {
-      width: 18px;
-      height: 18px;
-      background: rgba(255,80,80,0.13);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 9px;
-      color: #ff6060;
-      font-weight: 700;
+    li:last-child {
+      margin-bottom: 0;
     }
 
-    .contact-section {
-      background: rgba(59,110,248,0.08);
-      border-color: rgba(91,139,255,0.2);
+    a {
+      color: #7aa7f5;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(122, 167, 245, 0.35);
+      transition: color 0.15s ease, border-color 0.15s ease;
     }
 
-    .email-pill {
+    a:hover {
+      color: #a8c8ff;
+      border-bottom-color: rgba(168, 200, 255, 0.55);
+    }
+
+    .mono {
+      font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      font-size: 0.88em;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: var(--k-bg-input);
+      border: 1px solid var(--k-border);
+      color: var(--k-text-2);
+    }
+
+    .contact-box {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      margin-top: 11px;
-      background: rgba(91,139,255,0.13);
-      border: 1px solid rgba(91,139,255,0.22);
-      color: #7ba7ff;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 8px 15px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: background 0.2s;
+      gap: 10px;
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--k-bg-input);
+      border: 1px solid var(--k-border-md);
     }
 
-    .email-pill:hover {
-      background: rgba(91,139,255,0.22);
-    }
-
-    .footer {
-      padding: 15px 28px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .footer span {
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--k-border);
       font-size: 12px;
-      color: rgba(255,255,255,0.18);
-      font-weight: 400;
-    }
-
-    .footer-dot {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: rgba(91,139,255,0.4);
+      color: var(--k-text-muted);
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="wrap">
+    <div class="brand">Klypr</div>
+    <p class="sub">Privacy Policy · Last updated April 2026</p>
 
-    <div class="topbar">
-      <span class="topbar-logo">Klypr</span>
-      <span class="topbar-tag">Privacy Policy</span>
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p>
+        This policy describes how the Klypr Chrome extension handles information when you use it on YouTube.
+        Klypr is designed so your notes stay useful without sending them to us.
+      </p>
     </div>
 
-    <div class="content">
-
-      <div class="page-title">Privacy Policy</div>
-      <div class="page-sub">Last updated April 2026 &nbsp;·&nbsp; On-device. No tracking. No BS.</div>
-
-      <div class="section">
-        <div class="section-header">
-          <div class="section-icon">📌</div>
-          <h2>What is Klypr?</h2>
-        </div>
-        <p>Klypr is a Chrome extension that adds timestamped notes on YouTube watch pages — so your ideas stay pinned to exact moments in any video.</p>
-      </div>
-
-      <div class="section">
-        <div class="section-header">
-          <div class="section-icon">💾</div>
-          <h2>Data we store</h2>
-        </div>
-        <p>Notes, timestamps, optional titles, tags, and UI preferences (like your theme) are saved using <code>chrome.storage.local</code> directly in your browser. This data lives on your device only and is tied to the YouTube video you're watching. We do not operate a Klypr account or sync server.</p>
-      </div>
-
-      <div class="section">
-        <div class="section-header">
-          <div class="section-icon">🚫</div>
-          <h2>What we do not do</h2>
-        </div>
-        <ul class="dont-list">
-          <li><div class="x-badge">✕</div> Sell your data to anyone, ever</li>
-          <li><div class="x-badge">✕</div> Use your data for advertising or profiling</li>
-          <li><div class="x-badge">✕</div> Receive your stored notes on our servers</li>
-          <li><div class="x-badge">✕</div> Use your data for credit decisions or unrelated purposes</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <div class="section-header">
-          <div class="section-icon">🔑</div>
-          <h2>Permissions</h2>
-        </div>
-        <p>The extension runs on <code>https://www.youtube.com/*</code> to display the sidebar and timeline pins on watch pages. This matches the host permission in the extension manifest — nothing more.</p>
-      </div>
-
-      <div class="section">
-        <div class="section-header">
-          <div class="section-icon">🔗</div>
-          <h2>Third-party services</h2>
-        </div>
-        <p>Typography may be loaded from Google Fonts. That request is subject to Google's own terms and privacy policies.</p>
-      </div>
-
-      <div class="section contact-section">
-        <div class="section-header">
-          <div class="section-icon">✉️</div>
-          <h2>Contact</h2>
-        </div>
-        <p>Questions about this policy or how Klypr handles your data? Reach out directly.</p>
-        <a class="email-pill" href="mailto:soapythereal@gmail.com">✉️ &nbsp;soapythereal@gmail.com</a>
-      </div>
-
+    <h2>What is Klypr?</h2>
+    <div class="card">
+      <p>
+        Klypr is a Chrome extension that adds timestamped notes on YouTube watch pages, so you can tie ideas
+        to specific moments in a video.
+      </p>
     </div>
 
-    <div class="footer">
-      <span>© 2026 Klypr</span>
-      <div class="footer-dot"></div>
-      <span>Time-coded notes for YouTube</span>
+    <h2>Data we store</h2>
+    <div class="card">
+      <p>
+        Notes, timestamps, optional titles, tags, and UI preferences (such as theme) are saved with
+        <span class="mono">chrome.storage.local</span> in your browser. That data stays on your device and is
+        associated with the YouTube video you are viewing. Klypr does not provide an account or cloud sync service
+        for this data.
+      </p>
     </div>
 
+    <h2>What we do not do</h2>
+    <div class="card">
+      <ul>
+        <li>Sell your data to third parties</li>
+        <li>Use your data for advertising or profiling</li>
+        <li>Upload your stored notes to Klypr-operated servers as part of normal extension use</li>
+        <li>Use your data for credit decisions or purposes unrelated to the extension</li>
+      </ul>
+    </div>
+
+    <h2>Permissions</h2>
+    <div class="card">
+      <p>
+        The extension is limited to <span class="mono">https://www.youtube.com/*</span> so it can show the
+        sidebar and timeline pins on watch pages. That matches the host permissions declared in the extension
+        manifest.
+      </p>
+    </div>
+
+    <h2>Third-party services</h2>
+    <div class="card">
+      <p>
+        Typography may be loaded from Google Fonts. Those requests are subject to
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google’s privacy policy</a>
+        and terms.
+      </p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Questions about this policy or how Klypr handles your data:</p>
+      <div class="contact-box">
+        <a href="mailto:soapythereal@gmail.com?subject=Klypr%20privacy">soapythereal@gmail.com</a>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Klypr. This page applies to the Klypr Chrome extension only.
+    </footer>
   </div>
 </body>
 </html>
