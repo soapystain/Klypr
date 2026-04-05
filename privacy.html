@@ -17,8 +17,6 @@
       --k-text: #f4f8ff;
       --k-text-2: #a8c0f5;
       --k-text-muted: #9db9e9;
-      --k-accent-from: #386de0;
-      --k-accent-to: #66a3ff;
       --k-shadow: rgba(5, 9, 24, 0.45);
     }
 
@@ -43,17 +41,23 @@
       padding: 48px 20px 64px;
     }
 
-    .brand {
-      font-family: Poppins, "Plus Jakarta Sans", sans-serif;
-      font-size: clamp(1.75rem, 5vw, 2.25rem);
+    /* Matches extension .klypr-logo-text (content.css) — not position:absolute here */
+    .klypr-logo-text {
+      font-family: "Poppins", "Plus Jakarta Sans", sans-serif;
+      font-size: 28px;
       font-weight: 900;
-      letter-spacing: -0.08em;
-      background: linear-gradient(90deg, var(--k-accent-from), var(--k-accent-to));
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 0.5px rgba(56, 109, 224, 0.35));
-      margin-bottom: 6px;
+      background-clip: text;
+      filter: drop-shadow(0 0 0.08px #2563eb);
+      letter-spacing: -0.12em;
+      padding: 2px 6px;
+      display: inline-block;
+      user-select: none;
+      white-space: nowrap;
+      margin: 0 0 8px 0;
+      line-height: 1.1;
     }
 
     .sub {
@@ -160,7 +164,7 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="brand">Klypr</div>
+    <span class="klypr-logo-text">Klypr</span>
     <p class="sub">Privacy Policy · Last updated April 2026</p>
 
     <div class="card">
